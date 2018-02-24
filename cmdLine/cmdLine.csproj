@@ -11,7 +11,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ef-core-poc-lib\ef-core-poc-lib.csproj" />
+    <ProjectReference Include="..\ef-core-poc-common\ef-core-poc-common.csproj" />
+    <ProjectReference Include="..\ef-core-poc-lib\ef-core-poc-sql-server.csproj" />
+    <ProjectReference Include="..\ef-core-poc-pg\ef-core-poc-pg.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
   </ItemGroup>
 
 </Project>

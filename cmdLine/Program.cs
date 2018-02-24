@@ -9,14 +9,14 @@ namespace ef_core_poc
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            using(var ctxt = new Context())
+            using(var ctxt = CreateContext(args[0]))
             {
                 Console.WriteLine("Migrating the database");
                 ctxt.Database.Migrate();
                 Console.WriteLine("Migrated the database");
 
             }
-            using(var ctxt = new Context())
+            using(var ctxt = CreateContext(args[0]))
             {
                 Console.WriteLine("In the context");
                 var script = new ScriptsRun()
@@ -28,6 +28,17 @@ namespace ef_core_poc
 
                 ctxt.ScriptsRun.Add(script);
                 ctxt.SaveChanges();
+            }
+        }
+        private static Context CreateContext(string arg)
+        {
+            switch(arg)
+            {
+                case "pg":
+                    return new pg.Context();
+                case "mssql":
+                default:
+                    return new sql.Context();
             }
         }
     }
