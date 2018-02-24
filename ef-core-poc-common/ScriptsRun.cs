@@ -4,6 +4,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ef_core_poc.model 
 {
+    public enum ScriptRunAction
+    {
+        Run = 1,
+        Rehash = 2,
+    }
 
     [Table("scripts_run")]
     public class ScriptsRun
@@ -23,5 +28,7 @@ namespace ef_core_poc.model
         public DateTime? modified_date { get; set; }
         [StringLength(50)]
         public string entered_by { get; set; }
+
+        public ScriptRunAction run_action {get;set;}
     }
 }
