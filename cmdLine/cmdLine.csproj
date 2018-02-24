@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ef-core-poc-common\ef-core-poc-common.csproj" />
-    <ProjectReference Include="..\ef-core-poc-lib\ef-core-poc-sql-server.csproj" />
+    <ProjectReference Include="..\ef-core-poc-sql\ef-core-poc-sql.csproj" />
     <ProjectReference Include="..\ef-core-poc-pg\ef-core-poc-pg.csproj" />
   </ItemGroup>
 

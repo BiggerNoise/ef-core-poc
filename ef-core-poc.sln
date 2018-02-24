@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ef-core-poc-sql-server", "ef-core-poc-lib\ef-core-poc-sql-server.csproj", "{380889F0-F8DD-423F-8A98-CE1261C5A399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ef-core-poc-sql", "ef-core-poc-sql\ef-core-poc-sql.csproj", "{380889F0-F8DD-423F-8A98-CE1261C5A399}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cmdLine", "cmdLIne\cmdLine.csproj", "{2FE76A9C-90AE-481F-8657-BCA8C535B5A2}"
 EndProject
