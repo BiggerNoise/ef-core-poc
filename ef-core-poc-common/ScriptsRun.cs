@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ef_core_poc.model 
 {
+
     [Table("scripts_run")]
     public class ScriptsRun
     {

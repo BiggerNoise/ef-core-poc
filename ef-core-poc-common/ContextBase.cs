@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ef_core_poc.model 
 {
-    public class Context : DbContext
+    public class ContextBase : DbContext
     {
         public DbSet<ScriptsRun> ScriptsRun { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)

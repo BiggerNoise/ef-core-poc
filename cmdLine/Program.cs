@@ -30,7 +30,7 @@ namespace ef_core_poc
                 ctxt.SaveChanges();
             }
         }
-        private static Context CreateContext(string arg)
+        private static ContextBase CreateContext(string arg)
         {
             switch(arg)
             {

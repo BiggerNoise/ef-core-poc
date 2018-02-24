@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 using System.Collections.Generic;
 
-namespace efcorepoclib.Migrations
+namespace efcorepocsql.Migrations
 {
     public partial class InitialCreate : Migration
     {
@@ -19,13 +19,13 @@ namespace efcorepoclib.Migrations
                 {
                     id = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    entered_by = table.Column<string>(nullable: true),
+                    entered_by = table.Column<string>(maxLength: 50, nullable: true),
                     entry_date = table.Column<DateTime>(nullable: true),
                     modified_date = table.Column<DateTime>(nullable: true),
                     one_time_script = table.Column<bool>(nullable: false),
-                    script_name = table.Column<string>(nullable: true),
-                    text_hash = table.Column<string>(nullable: true),
-                    text_of_script = table.Column<string>(nullable: true),
+                    script_name = table.Column<string>(maxLength: 255, nullable: true),
+                    text_hash = table.Column<string>(maxLength: 512, nullable: true),
+                    text_of_script = table.Column<string>(type: "text", nullable: true),
                     version_id = table.Column<long>(nullable: false)
                 },
                 constraints: table =>

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
 
-namespace efcorepoclib.Migrations
+namespace efcorepocsql.Migrations
 {
     [DbContext(typeof(Context))]
     partial class ContextModelSnapshot : ModelSnapshot
@@ -25,7 +25,8 @@ namespace efcorepoclib.Migrations
                     b.Property<long>("id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("entered_by");
+                    b.Property<string>("entered_by")
+                        .HasMaxLength(50);
 
                     b.Property<DateTime?>("entry_date");
 
@@ -33,11 +34,14 @@ namespace efcorepoclib.Migrations
 
                     b.Property<bool>("one_time_script");
 
-                    b.Property<string>("script_name");
+                    b.Property<string>("script_name")
+                        .HasMaxLength(255);
 
-                    b.Property<string>("text_hash");
+                    b.Property<string>("text_hash")
+                        .HasMaxLength(512);
 
-                    b.Property<string>("text_of_script");
+                    b.Property<string>("text_of_script")
+                        .HasColumnType("text");
 
                     b.Property<long>("version_id");
 

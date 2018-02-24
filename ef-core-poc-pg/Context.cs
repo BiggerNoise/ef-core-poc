@@ -2,7 +2,7 @@
 
 namespace ef_core_poc.pg
 {
-    public class Context : model.Context
+    public class Context : model.ContextBase
     {
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
